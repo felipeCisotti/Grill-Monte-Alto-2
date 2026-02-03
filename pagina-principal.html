@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grill Monte Alto - Loja</title>
+    <link rel="stylesheet" href="loja.css">
+    <link rel="shortcut icon" href="assets/icone-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav>
+        <img src="assets/Logo-grill(branca).png" alt="Grill Monte Alto" class="nav-logo">
+        <input placeholder="Pesquisar" type="text" name="text" class="input-header" id="nav-search">
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Abrir menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-menu">
+            <li><a href="pagina-principal.html"><i class="fa-regular fa-house"></i> Inicio</a></li>
+            <li><a href="loja.html"><i class="fa-solid fa-book"></i> Catalogo</a></li>
+            <li><a href="contato.html"><i class="fa-solid fa-info"></i> Sobre Nós</a></li>
+            <li><a href="contato.html"><i class="fa-regular fa-paper-plane"></i> Orçamento</a></li>
+            <li><a href="contato.html"> <i class="fa-solid fa-location-crosshairs"></i> Atendimento</a></li>
+            <div class="contact-header">
+                <li><a href="contato.html">Contato <i class="fa-regular fa-envelope"></i></a></li>
+            </div>
+        </ul>
+    </nav>
+
+    <div class="carroussel-first">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/banner1.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <section class="icones">
+        <div class="icones-container">
+            <div class="icone-item">
+                <img src="assets/icons/iglu.png" alt="">
+                <p>Fogão Iglu
+                </p>
+            </div>
+            <div class="icone-item">
+                <img src="assets/icons/churrasqueira-lisa.png" alt="">
+                <p>Churrasqueira Tradicional</p>
+            </div>
+            <div class="icone-item">
+                <img src="assets/icons/fogao.png" alt="">
+                <p>Fogão com Churrasqueira</p>
+            </div>
+    </section>
+
+    <section class="about-us">
+        <div class="container-principal">
+
+            <div class="imagens">
+                <div class="card-info-1"></div>
+
+                <img src="assets/icons/churrasqueira1.png" alt="">
+                <img src="assets/icons/churrasqueira2.png" alt="">
+
+                <div class="card-info-2"></div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="carousel-container-itens">
+        <div class="carousel-itens">
+            <div class="carousel-track-itens">
+                <div class="carousel-item-itens">
+                    <img src="assets/icons/car1.png" alt="">
+                </div>
+                <div class="carousel-item-itens">
+                    <img src="assets/icons/car2.png" alt="">
+                </div>
+                <div class="carousel-item-itens">
+                    <img src="assets/icons/car3.png" alt="">
+                </div>
+                <div class="carousel-item-itens">
+                    <img src="assets/icons/car4.png" alt="">
+                </div>
+                <div class="carousel-item-itens">
+                    <img src="assets/icons/car5.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+        </div>
+    </section>
+
+    <section class="orcamento">
+        <div class="container-orcamento">
+
+            <div class="orcamento-texto">
+                <h3>Solicite seu orçamento</h3>
+                <h2>PERSONALIZADO</h2>
+
+                <p>
+                    Conte um pouco sobre sua necessidade e nossa equipe
+                    entrará em contato com uma proposta feita sob medida.
+                </p>
+
+                <button type="button" class="orcamento-btn" id="openmodal">
+                    Orçamento
+                </button>
+            </div>
+
+            <div class="orcamento-img">
+                <img src="assets/icons/orcamento-man.png" alt="Orçamento">
+            </div>
+
+        </div>
+    </section>
+
+
+        <dialog id="favDialog">
+            <form method="dialog">
+                <section>
+                    <p>
+                    <div class="header-modal">
+                        <label for="nome">Nome:</label>
+                        <button id="cancel" type="reset"><i class="fa fa-times" aria-hidden="true"></i></button>
+                    </div>
+                    <input type="text" id="nome" name="Nome">
+                    <label for="numero">Telefone:</label>
+                    <input type="text" id="numero" name="Telefone"> <br>
+                    <label for="cidade">Cidade:</label> 
+                    <input type="text" id="cidade" name="Cidade"> <br>
+                    <label for="tipo-de-compra">Tipo de Compra:</label> 
+                    <select id="tipo-de-compra" name="Tipo de Compra">
+                        <option value="Atacado">Atacado</option>
+                        <option value="Varejo">Varejo</option>
+                    </select><br>
+                    <label for="categoria">Categoria:</label> 
+                    <select id="categoria" name="Categoria">
+                        <option value="Churrasqueira">Churrasqueira</option>
+                        <option value="Fogão">Fogão</option>
+                        <option value="Outros">Churrasqueira com fogão</option>
+                    </select> <br>
+                    <label for="tamanho">Tamanho:</label> 
+                    <select id="tamanho" name="Tamanho">
+                        <option value="Pequeno">Pequeno</option>
+                        <option value="Médio">Médio</option>
+                        <option value="Grande">Grande</option>
+                    </select>
+                    </p>
+                </section>
+                <menu>
+                    <button type="submit">Solicitar Orçamento</button>
+                </menu>
+            </form>
+        </dialog>
+
+    
+
+    <section class="atuacao">
+        <div class="atuacao-container">
+
+            <div class="atuacao-texto">
+                <h3>Onde nós atuamos?</h3>
+                <h2>DESCUBRA</h2>
+
+                <p>
+                    Estamos localizados em Monte Alto, mas o nosso atendimento não tem
+                    fronteiras! Atendemos toda a região com agilidade e compromisso,
+                    garantindo que sua área gourmet seja o destaque da casa.
+                </p>
+            </div>
+
+            <div class="atuacao-mapa">
+                <img src="assets/icons/mapa-regiao.png" alt="Mapa de atuação">
+            </div>
+
+        </div>
+    </section>
+
+    <section class="avaliacoes-section">
+
+        <!-- LADO ESQUERDO (cards) -->
+        <div class="avaliacoes-left">
+      
+          <div class="avaliacao-card">
+            <div class="stars">★★★★★</div>
+            <p>
+              Produto robusto, acabamento impecável e excelente atendimento.
+            </p>
+            <img src="https://i.pravatar.cc/80?img=5" alt="cliente">
+          </div>
+      
+          <div class="avaliacao-card">
+            <div class="stars">★★★★★</div>
+            <p>
+              Entrega rápida, orçamento de qualidade e atendimento eficiente!
+            </p>
+            <img src="https://i.pravatar.cc/80?img=12" alt="cliente">
+          </div>
+      
+          <div class="avaliacao-card">
+            <div class="stars">★★★★★</div>
+            <p>
+              Adorei a churrasqueira! belíssima e super funcional!!!
+            </p>
+            <img src="https://i.pravatar.cc/80?img=25" alt="cliente">
+          </div>
+      
+        </div>
+      
+      
+        <!-- LADO DIREITO (texto grande) -->
+        <div class="avaliacoes-right">
+      
+          <span class="tag">Avaliações</span>
+      
+          <h1>Qualidade que<br>aparece no uso</h1>
+      
+          <p>
+            Qualidade que aparece no uso
+          </p>
+      
+          <div class="fogo-icon"></div>
+      
+        </div>
+      
+      </section>
+
+      <section class="faq-section">
+
+        <!-- LADO ESQUERDO -->
+        <div class="faq-left">
+          <span class="faq-tag">FAQ</span>
+      
+          <h1>Perguntas<br>Frequentes</h1>
+      
+          <div class="faq-bg-icon"></div>
+        </div>
+      
+        <!-- LADO DIREITO -->
+        <div class="faq-right">
+      
+          <details class="faq-item">
+            <summary>Todas as churrasqueiras são pré-moldadas?</summary>
+            <p>
+              Sim. Nossas churrasqueiras são produzidas em concreto pré-moldado,
+              garantindo alta durabilidade e instalação mais rápida.
+            </p>
+          </details>
+      
+          <details class="faq-item">
+            <summary>Vocês fazem entregas de pedidos de varejo?</summary>
+            <p>
+              Sim. Realizamos entregas tanto para clientes finais quanto para
+              revendedores, dependendo da região e quantidade.
+            </p>
+          </details>
+      
+          <details class="faq-item">
+            <summary>As churrasqueiras vêm montadas ou desmontadas?</summary>
+            <p>
+              Elas são entregues em módulos pré-moldados para facilitar o transporte,
+              e a montagem é simples e rápida.
+            </p>
+          </details>
+      
+          <details class="faq-item">
+            <summary>Como funcionam os pedidos para lojas atacadistas?</summary>
+            <p>
+              Para atacado oferecemos condições especiais, preços diferenciados e
+              suporte direto. Basta entrar em contato pelo nosso setor comercial.
+            </p>
+          </details>
+      
+        </div>
+      
+      </section>
+      
+      
+
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- LOGO -->
+            <div class="footer-logo">
+                <img src="assets/icons/Logo-vermelha.png" alt="Grill Monte Alto">
+            </div>
+
+            <!-- LINKS -->
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Quem Somos</a></li>
+                    <li><a href="#">Glossário</a></li>
+                    <li><a href="#">Destaques</a></li>
+                </ul>
+
+                <ul>
+                    <li><a href="#">Fale Conosco</a></li>
+                    <li><a href="#">Trabalhe Conosco</a></li>
+                </ul>
+            </div>
+
+            <!-- FRASE -->
+            <div class="footer-frase">
+                <img src="assets/icons/frase.png" alt="Frase de efeito">
+            </div>
+
+        </div>
+
+        <!-- REDES SOCIAIS -->
+        <div class="footer-social">
+            <a href="#"><img src="assets/icons/insta.png" alt="Instagram"></a>
+            <a href="#"><img src="assets/icons/face.png" alt="Facebook"></a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+
+    <script>
+        const track = document.querySelector('.carousel-track-itens');
+        const dots = document.querySelectorAll('.dot');
+
+        const itemsPerView = 3;
+        let currentIndex = 0;
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                currentIndex = parseInt(dot.dataset.index);
+                updateCarousel();
+            });
+        });
+
+        function updateCarousel() {
+            const itemWidth = document.querySelector('.carousel-item-itens').offsetWidth + 30;
+            track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[currentIndex].classList.add('active');
+        }
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
