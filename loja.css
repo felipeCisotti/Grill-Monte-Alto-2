@@ -452,13 +452,12 @@ nav img {
 }
 
 .orcamento-img img {
-  width: clamp(360px, 44vw, 720px);
+  width: 490px;
   height: auto;
   max-height: calc(100% - 12px);
   display: block;
   border-radius: 20px;
   transform-origin: bottom right;
-  transform: translateY(6%);
 }
 
 
@@ -1384,7 +1383,7 @@ menu button {
 
   .orcamento-img img {
     width: 100%;
-    max-width: 320px;
+    max-width: 220px;
     margin: 0 auto;
   }
 
