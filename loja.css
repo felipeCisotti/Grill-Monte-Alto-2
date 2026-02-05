@@ -9,7 +9,7 @@
 }
 
 body {
-        background-color: #F8BD5E !important;
+        background-color: whitesmoke  !important;
 
 }
 
@@ -137,15 +137,18 @@ nav img {
 .carroussel-first{
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 10px;
 }
 .carroussel-first img{
     border-radius: 20px;
+    height: auto;
+    width: 100%;
+
 }
 
 .icones{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     gap: 30px;
     margin-top: 150px;
 }
@@ -154,13 +157,14 @@ nav img {
     height: 80px;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
-
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
 }
 
 .icone-item{
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -300,23 +304,20 @@ nav img {
 }
 
 .orcamento-texto h3 {
-  font-family: cursive;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 28px;
   color: #f6c36a;
-  margin-bottom: 10px;
 }
 
 .orcamento-texto h2 {
   font-size: 36px;
   font-weight: 800;
-  margin-bottom: 20px;
 }
 
 .orcamento-texto p {
   font-size: 18px;
   line-height: 1.5;
   color: #f2d9a6;
-  margin-bottom: 40px;
 }
 
 /* BOTÃO */
@@ -324,7 +325,7 @@ nav img {
   background-color: #f6c36a;
   color: #7b0f0f;
   border: none;
-  padding: 18px 40px;
+  padding: 9px 20px;
   font-size: 18px;
   font-weight: bold;
   border-radius: 14px;
@@ -350,23 +351,23 @@ nav img {
 
 
 .atuacao {
-    margin-top: 150px;
+  margin-top: 150px;
   width: 100%;
   background: linear-gradient(
     to right,
-    #801313 50%,
-    #f6c36a 50%
+    rgba(0, 0, 0, 0.864) 50%,
+    #F8BD5E 50%
   );
 }
 
 .atuacao-container {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 100px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 80px;
+  height: auto;
 }
 
 /* TEXTO */
@@ -396,7 +397,6 @@ nav img {
 
 /* MAPA */
 .atuacao-mapa {
-  background: #f6c36a;
   padding: 40px;
 }
 
@@ -408,7 +408,6 @@ nav img {
 
 .footer {
   background: #fff;
-  border-top: 6px solid #801313;
   padding: 40px 0 20px;
 }
 
@@ -646,8 +645,8 @@ menu button:hover {
 .avaliacao-card {
   background: #8b0f0f;
   color: white;
-  width: 622px;
-  height: 163px;
+  width: 500px;
+  height: 120px;
   padding: 18px 25px;
   border-radius: 40px;
   position: relative;
@@ -658,21 +657,21 @@ menu button:hover {
 .stars {
   color: #f9c97a;
   font-size: 18px;
-  margin-bottom: 6px;
+  margin-bottom: 2px;
 }
 
 /* TEXTO */
 .avaliacao-card p {
-  font-size: 20px;
+  font-size: 16px;
   margin: 0;
   line-height: 1.4;
-  max-width: 250px;
+  max-width: 280px;
 }
 
 /* FOTO */
 .avaliacao-card img {
-  width: 163px;
-  height: 163px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   border: 4px solid #f9c97a;
   position: absolute;
@@ -708,24 +707,25 @@ menu button:hover {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  width: 481.34228515625px;
-  height: 75.65283966064453px;
-  font-size: 40px;
+  width: 211px;
+  height: 40px;
+  font-size: 20px;
 }
 
 /* TÍTULO GRANDE */
 .avaliacoes-right h1 {
-  font-size: 80px;
+  font-size: 30px;
   font-weight: 800;
   color: #f9c97a;
   margin: 0;
   line-height: 1.1;
+  margin-top: 15px;
   text-align: center;
 }
 
 /* SUBTEXTO */
 .avaliacoes-right p {
-  font-size: 44px;
+  font-size: 22px;
   margin-top: 15px;
   text-align: center;
 }
@@ -752,7 +752,7 @@ menu button:hover {
 /* LADO ESQUERDO */
 .faq-left {
   width: 50%;
-  background: #8b0f0f;
+  background: rgba(0, 0, 0, 0.864);
   color: white;
   padding: 80px;
   position: relative;
@@ -767,9 +767,9 @@ menu button:hover {
   font-weight: bold;
   font-size: 22px;
   margin-bottom: 40px;
-  width: 481.34228515625px;
-  height: 75.65283966064453px;
-  font-size: 40px;
+  width: 211px;
+  height: 40px;
+  font-size: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -777,7 +777,7 @@ menu button:hover {
 }
 
 .faq-left h1 {
-  font-size: 80px;
+  font-size: 50px;
   font-weight: 900;
   color: #f9c97a;
   line-height: 1.1;
@@ -807,11 +807,12 @@ menu button:hover {
 
 /* ITEM FAQ */
 .faq-item {
-  background: #8b0f0f;
+    background: #8b0f0f;
   border-radius: 25px;
   padding: 25px 30px;
   box-shadow: 0 6px 12px rgba(0,0,0,0.25);
   cursor: pointer;
+  transition: background 0.3s;
 }
 
 /* REMOVE SETA PADRÃO */
