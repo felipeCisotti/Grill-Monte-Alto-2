@@ -13,13 +13,12 @@
 
 body {
   background-color: whitesmoke !important;
-  font-family: 'Poppins', sans-serif !important;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
 }
 
 /* Texto padrão (Poppins regular) para elementos não-título */
 p, a, li, span, input, select, textarea, label, small,
-.icone-item p,
 .card-info-1 p,
 .card-info-2 p,
 .card-info-3 p,
@@ -209,7 +208,7 @@ nav img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 100px;
+  gap: 250px;
 }
 
 .icone-item {
@@ -223,8 +222,8 @@ nav img {
 }
 
 .icone-item img {
-  height: 100%;
-  width: 100%;
+  height: 200px;
+  width: auto;
 }
 
 .icone-item p {
@@ -232,7 +231,12 @@ nav img {
   font-weight: bold;
   color: #801313;
   font-size: 22px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Alfa Slab One', cursive !important;
+}
+
+.icone-item p a {
+  font-family: 'Alfa Slab One', cursive !important;
+  font-weight: normal !important;
 }
 
 .about-us {
