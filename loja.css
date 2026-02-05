@@ -384,6 +384,7 @@ nav img {
 
   background-color: rgba(0, 0, 0, 0.864);
   padding: 80px 0;
+  position: relative;
 }
 
 .container-orcamento {
@@ -428,7 +429,7 @@ nav img {
   color: #000000dc;
   border: none;
   padding: 9px 20px;
-  font-size: 18px;
+  font-size: 30px;
   font-weight: bold;
   border-radius: 14px;
   cursor: pointer;
@@ -440,14 +441,24 @@ nav img {
 
 /* IMAGEM */
 .orcamento-img {
-  padding: 30px;
+  padding: 0 30px 0 0;
   border-radius: 24px;
+  position: absolute;
+  right: 60px;
+  bottom: 0;
+  display: block;
+  z-index: 3;
+  pointer-events: none;
 }
 
 .orcamento-img img {
-  width: 350px;
+  width: clamp(360px, 44vw, 720px);
+  height: auto;
+  max-height: calc(100% - 12px);
   display: block;
   border-radius: 20px;
+  transform-origin: bottom right;
+  transform: translateY(6%);
 }
 
 
@@ -568,7 +579,7 @@ nav img {
 .footer-social {
   max-width: 1300px;
   margin: 20px auto 0;
-  padding: 0 40px;
+  padding: 0;
   display: flex;
   justify-content: flex-end;
   gap: 16px;
@@ -590,26 +601,26 @@ nav img {
 dialog#favDialog {
   border: none;
   padding: 0;
-  background: #F9C97A;
-  width: 600px;
-  max-width: 95%;
+  background: #F9C97A; /* amarelo */
+  width: 900px;
+  max-width: 96%;
   height: auto;
   overflow-y: auto;
-  max-height: 90vh;
-  border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 92vh;
+  border-radius: 22px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1000;
-  transition: all 0.3s ease;
-  animation: slideIn 0.3s ease;
+  transition: all 0.28s cubic-bezier(.2,.9,.3,1);
+  animation: slideIn 0.28s ease;
 
   @keyframes slideIn {
     from {
       opacity: 0;
-      transform: translate(-50%, -40%) scale(0.9);
+      transform: translate(-50%, -40%) scale(0.96);
     }
 
     to {
@@ -626,36 +637,60 @@ dialog::backdrop {
 
 /* FORM */
 dialog form {
-  padding: 32px;
-  color: #000000dc;
+  padding: 32px 36px 28px 36px;
+  color: #000000dc; /* texto preto */
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
+  width: 60%;
 }
 
 /* HEADER */
 .header-modal {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  gap: 8px;
 }
 
 .header-modal label {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
+  color: #000000dc;
 }
 
-/* BOTÃO FECHAR */
-#cancel {
+/* BOTÃO FECHAR: fixado no canto superior direito do dialog */
+dialog #cancel {
+  position: absolute !important;
+  right: 12px !important;
+  top: 12px !important;
   background: transparent;
-  border: 2px solid #fff;
+  border: 2px solid #000000dc;
   border-radius: 50%;
-  width: 34px;
-  height: 34px;
-  color: #fff;
+  width: 44px;
+  height: 44px;
+  color: #000000dc;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 4000;
+}
+
+button #cancel {
+  position: absolute !important;
+  right: 12px !important;
+  top: 12px !important;
+  background: transparent;
+  border: 2px solid #000000dc;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  color: #000000dc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4000;
 }
 
 #cancel i {
@@ -665,24 +700,28 @@ dialog form {
 /* LABELS */
 dialog label {
   display: block;
-  margin: 14px 0 0px;
-  font-size: 16px;
+  margin: 12px 0 8px;
+  font-size: 15px;
   font-family: 'Poppins', sans-serif;
-  font-weight: 400;
+  font-weight: 600;
+  color: #000000dc;
 }
 
 /* INPUTS E SELECTS */
 dialog input,
 dialog select {
   width: 100%;
-  height: 44px;
+  height: 46px;
   border-radius: 12px;
   border: none;
-  padding: 0 14px;
+  padding: 10px 14px;
   font-size: 16px;
   outline: none;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
+  background: #ffffff;
+  color: #000000;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08) inset;
 }
 
 /* PLACEHOLDER */
@@ -709,6 +748,135 @@ dialog section p>select {
 #tamanho {
   grid-column: span 1;
 }
+
+/* Ajuste: deixar o label e o select de `categoria` e `tamanho` lado a lado */
+dialog label[for="categoria"],
+dialog label[for="tamanho"],
+dialog #categoria,
+dialog #tamanho {
+  grid-column: span 1 !important;
+}
+
+/* Espaçamento entre label e select quando lado a lado */
+dialog label[for="categoria"],
+dialog label[for="tamanho"] {
+  margin-bottom: 6px;
+}
+
+/* Posicionamento explícito: categoria na coluna 1, tamanho na coluna 2 */
+dialog section p label[for="categoria"],
+dialog section p #categoria {
+  grid-column: 1 / 2 !important;
+}
+
+dialog section p label[for="tamanho"],
+dialog section p #tamanho {
+  grid-column: 2 / 3 !important;
+}
+
+/* Em telas pequenas, empilhar novamente */
+@media (max-width: 480px) {
+  dialog section p label[for="categoria"],
+  dialog section p #categoria,
+  dialog section p label[for="tamanho"],
+  dialog section p #tamanho {
+    grid-column: span 2 !important;
+  }
+}
+/* Novo: layout de duas colunas interno (usado pelo HTML atualizado) */
+.two-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 18px;
+  align-items: start;
+}
+.two-cols .col label {
+  margin-bottom: 6px;
+  display: block;
+}
+.two-cols .col select {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Imagem decorativa do modal (fogo) posicionada à direita do form */
+dialog .fogo-modal {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 500px;
+  height: auto;
+  max-height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: 1;
+  border-radius: 22px;
+  box-shadow: none;
+  display: block;
+}
+
+/* esconder em telas menores para evitar sobreposição e centralizar o modal */
+@media (max-width: 992px) {
+  /* Esconder imagem decorativa em tablets/phones */
+  dialog .fogo-modal {
+    display: none !important;
+  }
+
+  /* Ajustes do dialog para ficar responsivo e centralizado */
+  dialog#favDialog {
+    /* usar cálculo para garantir encaixe na tela com margem lateral */
+    width: calc(100% - 32px) !important;
+    max-width: calc(100% - 32px) !important;
+    height: auto !important;
+    max-height: 90vh !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    padding: 0;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+  }
+
+  /* Form ocupa toda a largura disponível e conteúdo centralizado */
+  dialog form {
+    width: 100% !important;
+    padding: 22px !important;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  dialog label {
+    text-align: center;
+    margin: 10px auto 6px;
+    display: block;
+  }
+
+  dialog input,
+  dialog select {
+    width: 100% !important;
+    margin: 0 auto 12px !important;
+  }
+
+  /* Empilha as duas colunas internas em mobile */
+  .two-cols {
+    grid-template-columns: 1fr !important;
+    gap: 10px 0 !important;
+  }
+
+  /* Garantir que o botão fechar fique acima de tudo */
+  dialog #cancel {
+    right: 8px !important;
+    top: 8px !important;
+    z-index: 6000 !important;
+  }
+}
+
+/* garantir que o form fique acima da imagem decorativa */
+dialog form {
+  position: relative;
+  z-index: 2;
+}
+
 
 /* MENU */
 menu {
@@ -1188,7 +1356,7 @@ menu button {
 
   .orcamento {
     margin-top: 60px;
-    padding: 50px 20px;
+    padding: 80px 0; /* manter padding original para não alterar o tamanho da section */
   }
 
   .container-orcamento {
@@ -1334,13 +1502,30 @@ menu button {
 }
 
 @media (max-width: 480px) {
+  .icones-container {
+    height: auto;
+    gap: 20px;
+    padding: 0 8px;
+  }
+
   .icone-item {
-    height: 100px;
-    width: 100px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .icone-item img {
+    height: 80px !important;
+    width: auto !important;
+    object-fit: contain;
   }
 
   .icone-item p {
-    font-size: 14px;
+    font-size: 13px;
+    text-align: center;
   }
 
   .orcamento-texto h2 {

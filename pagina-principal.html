@@ -180,7 +180,7 @@
             </div>
 
             <div class="orcamento-img">
-                <img src="assets/icons/orcamento-man.png" alt="Orçamento">
+                <img src="assets/icons/homemgrill.png" alt="Orçamento">
             </div>
 
         </div>
@@ -188,12 +188,13 @@
 
 
     <dialog id="favDialog">
+        <button id="cancel" type="reset"><i class="fa fa-times" aria-hidden="true"></i></button>
         <form method="dialog">
             <section>
                 <p>
                 <div class="header-modal">
                     <label for="nome">Nome:</label>
-                    <button id="cancel" type="reset"><i class="fa fa-times" aria-hidden="true"></i></button>
+                    
                 </div>
                 <input type="text" id="nome" name="Nome">
                 <label for="numero">Telefone:</label>
@@ -205,24 +206,31 @@
                     <option value="Atacado">Atacado</option>
                     <option value="Varejo">Varejo</option>
                 </select><br>
-                <label for="categoria">Categoria:</label>
-                <select id="categoria" name="Categoria">
-                    <option value="Churrasqueira">Churrasqueira</option>
-                    <option value="Fogão">Fogão</option>
-                    <option value="Outros">Churrasqueira com fogão</option>
-                </select> <br>
-                <label for="tamanho">Tamanho:</label>
-                <select id="tamanho" name="Tamanho">
-                    <option value="Pequeno">Pequeno</option>
-                    <option value="Médio">Médio</option>
-                    <option value="Grande">Grande</option>
-                </select>
+                                <div class="two-cols">
+                                    <div class="col">
+                                        <label for="categoria">Categoria:</label>
+                                        <select id="categoria" name="Categoria">
+                                            <option value="Churrasqueira">Churrasqueira</option>
+                                            <option value="Fogão">Fogão</option>
+                                            <option value="Outros">Churrasqueira com fogão</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <label for="tamanho">Tamanho:</label>
+                                        <select id="tamanho" name="Tamanho">
+                                            <option value="Pequeno">Pequeno</option>
+                                            <option value="Médio">Médio</option>
+                                            <option value="Grande">Grande</option>
+                                        </select>
+                                    </div>
+                                </div>
                 </p>
             </section>
             <menu>
                 <button type="submit">Solicitar Orçamento</button>
             </menu>
         </form>
+        <img src="assets/icons/fogo-modal.png" class="fogo-modal" alt="fogo decoração">
     </dialog>
 
 
