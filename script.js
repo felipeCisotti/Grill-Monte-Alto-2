@@ -1,7 +1,5 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-    const track = document.querySelector('.carousel-track-itens');
-    const dots = document.querySelectorAll('.dot');
     const updateButton = document.getElementById('openmodal');
     const cancelButton = document.getElementById('cancel');
     const favDialog = document.getElementById('favDialog');
@@ -27,32 +25,61 @@ document.addEventListener('DOMContentLoaded', () => {
         if (cancelButton) cancelButton.addEventListener('click', () => favDialog.close());
     }
 
-    // Carousel: proteger contra ausência de elementos
-    const itemsPerView = 3;
-    let currentIndex = 0;
-
-    if (dots && dots.length > 0) {
-        dots.forEach(dot => {
-            dot.addEventListener('click', () => {
-                currentIndex = parseInt(dot.dataset.index) || 0;
-                updateCarousel();
-            });
-        });
-    }
-
-    function updateCarousel() {
-        const itemEl = document.querySelector('.carousel-item-itens');
-        if (!track || !itemEl) return;
-        const itemWidth = itemEl.offsetWidth + 30;
-        track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
-
-        if (dots && dots.length > 0) {
-            dots.forEach(dot => dot.classList.remove('active'));
-            if (dots[currentIndex]) dots[currentIndex].classList.add('active');
-        }
-    }
-
 });
 
+// Mensagem automática para WhatsApp
 
+const Inpname = document.getElementById('nome');
+const Inpphone = document.getElementById('numero');
+const Inptype = document.getElementById('tipo-de-compra');
+const Inpcategory = document.getElementById('categoria');
+const Inptamanho = document.getElementById('tamanho');
+const submitBtn = document.getElementById('button-enviar');
 
+const handleSubmitForm = async () => {
+    // Validar se todos os campos estão preenchidos
+    if (!Inpname || !Inpname.value.trim()) {
+        alert('Por favor, preencha o nome.');
+        return;
+    }
+    if (!Inpphone || !Inpphone.value.trim()) {
+        alert('Por favor, preencha o telefone.');
+        return;
+    }
+    if (!Inptype || !Inptype.value) {
+        alert('Por favor, selecione o tipo de compra.');
+        return;
+    }
+    if (!Inpcategory || !Inpcategory.value) {
+        alert('Por favor, selecione a categoria.');
+        return;
+    }
+    if (!Inptamanho || !Inptamanho.value) {
+        alert('Por favor, selecione o tamanho.');
+        return;
+    }
+
+    const name = Inpname.value;
+    const phone = Inpphone.value;
+    const type = Inptype.value;
+    const category = Inpcategory.value;
+    const tamanho = Inptamanho.value;
+
+    const mensagem = `Olá, gostaria de solicitar um orçamento para um ${type} de ${category} no tamanho ${tamanho}. Meu nome é ${name} e meu telefone é ${phone}.`;
+    
+    console.log('Mensagem:', mensagem);
+
+    // Enviar para WhatsApp
+    const numeroWhatsApp = '5516997816739';
+    const mensagemEncoded = encodeURIComponent(mensagem);
+    const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensagemEncoded}`;
+    
+    window.open(urlWhatsApp, '_blank');
+
+    const favDialog = document.getElementById('favDialog');
+    if (favDialog) favDialog.close();
+};
+
+if (submitBtn) {
+    submitBtn.addEventListener('click', handleSubmitForm);
+}
