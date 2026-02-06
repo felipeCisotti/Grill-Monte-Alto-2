@@ -135,9 +135,6 @@
 
 
     <section class="carousel-container-itens">
-        <button class="carousel-nav carousel-nav-prev" id="prevBtn" aria-label="Slide anterior">
-            <i class="fa-solid fa-chevron-left"></i>
-        </button>
         
         <div class="carousel-itens">
             <div class="carousel-track-itens">
@@ -158,10 +155,7 @@
                 </div>
             </div>
         </div>
-        
-        <button class="carousel-nav carousel-nav-next" id="nextBtn" aria-label="Próximo slide">
-            <i class="fa-solid fa-chevron-right"></i>
-        </button>
+    
 
         <div class="carousel-dots">
             <span class="dot active" data-index="0"></span>
@@ -466,14 +460,11 @@
             });
         });
         
-        // Botões de navegação
         document.getElementById('prevBtn').addEventListener('click', prevSlide);
         document.getElementById('nextBtn').addEventListener('click', nextSlide);
         
-        // Iniciar autoplay ao carregar
         startAutoplay();
         
-        // Parar autoplay ao passar o mouse (opcional)
         document.querySelector('.carousel-container-itens').addEventListener('mouseenter', () => {
             clearInterval(autoplayInterval);
         });
@@ -521,9 +512,8 @@
                     "dontShowOn": ""
                 },
                 "boost": {
-                    "greetingEnabled": true,
+                    "greetingEnabled": false,
                     "displayFrequency": "every_3_hours",
-                    "greetingDelay": 3,
                     "startChatText": "Comece a conversa no WhatsApp!",
                     "greetingMessage": "Olá 👋 Como podemos ajudar? Mande uma mensagem para receber seu orçamento personalizado!",
                     "mirrorEnabled": false,

@@ -398,7 +398,7 @@ nav img {
 
 .carousel-item-itens img {
   width: 100%;
-  height: 300px;
+  height: 200px;
   object-fit: cover;
   display: block;
 }
@@ -1205,6 +1205,23 @@ menu button {
     margin: 0;
   }
 
+  .icones-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    gap: 100px;
+  }
+
+  .icones-container .icone-item img p {
+    width: 120px;
+    height: 120px;
+    gap: 100px;
+  }
+
+  .icones-container img{
+    width: 100%;
+    height: auto;
+  }
 
   .atuacao {
     background: #000000dc;
@@ -1240,6 +1257,16 @@ menu button {
   .avaliacoes-right {
     width: 100%;
     padding: 40px 24px;
+  }
+
+  .orcamento-img{
+    display: none;
+  }
+
+  .orcamento-btn{
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
   }
 
   .avaliacao-card {
@@ -1283,6 +1310,10 @@ menu button {
 
   .faq-left h1 {
     font-size: 56px;
+  }
+
+  .carousel-item-itens img {
+    height: 180px;
   }
 
   .faq-tag {
