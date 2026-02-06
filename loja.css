@@ -302,6 +302,9 @@ header{
   width: 360px;
   height: auto;
   border-radius: 25px;
+  padding: 40px;
+  display: flex;
+  text-align: justify;
 }
 
 .card-info-3 h3 {
