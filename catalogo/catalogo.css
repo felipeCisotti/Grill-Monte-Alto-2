@@ -13,6 +13,27 @@ body {
 
 }
 
+/* Tipografia: Poppins para texto, Alfa Slab One para títulos/elementos de destaque */
+body,
+p,
+a,
+li,
+span,
+label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6,
+button,
+.flip-card-front p {
+  font-family: 'Alfa Slab One', cursive;
+  font-weight: 100 !important; /* reduzir visual de 'negrito' sintetizado */
+  letter-spacing: 0.6px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
 @keyframes rotateYAnimation {
     from {
         transform: rotateY(0deg);
@@ -213,9 +234,11 @@ nav img {
   height: 372px;
   background: white;
   border-radius: 25px;
-  overflow: hidden;
+  overflow-y: auto; /* permitir rolagem se o conteúdo ultrapassar */
+  -webkit-overflow-scrolling: touch;
   font-family: sans-serif;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  padding-bottom: 8px;
 }
 
 .card-header {
