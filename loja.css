@@ -62,7 +62,7 @@ menu button,
 
 nav {
   background-color: #801313;
-  padding: 10px 20px;
+  padding: 20px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -74,10 +74,13 @@ nav a {
   margin: 0 15px;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
+  transition: all 0.3s ease;
+  transition: transform 0.2s;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  transform: scale(1.02);
+  color: rgba(255, 255, 255, 0.549);
 }
 
 nav ul {
@@ -86,6 +89,14 @@ nav ul {
   display: flex;
   margin: 0;
   padding: 0;
+}
+
+nav li{
+  transition: transform 0.3s ease;
+}
+
+nav li:hover {
+  transform: scale(1.1);
 }
 
 nav img {
@@ -263,7 +274,7 @@ nav img {
 .card-info-1,
 .card-info-2 {
   background-color: #ffffff;
-  width: 518px;
+  width: 540px;
   height: 250px;
   border-radius: 25px;
 }
@@ -289,11 +300,11 @@ nav img {
 }
 
 .card-info-1{
-  margin-right: -100px;
+  margin-right: -90px;
 }
 
 .card-info-2 {
-  margin-left: -100px;
+  margin-left: -90px;
 }
 
 .card-info-3{
