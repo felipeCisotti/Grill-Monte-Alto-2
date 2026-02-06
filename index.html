@@ -22,11 +22,13 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
     </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
 
-
+<header>
     <nav>
         <img src="assets/LOGONOVABRANCA.png" alt="Grill Monte Alto" class="nav-logo">
         <input placeholder="Pesquisar" type="text" name="text" class="input-header" id="nav-search">
@@ -34,30 +36,34 @@
             <span></span><span></span><span></span>
         </button>
         <ul class="nav-menu">
-            <li><a href="pagina-principal.html" class="poppins-regular"><i class="fa-regular fa-house"></i> Inicio</a>
+            <li><a href="index.html" class="poppins-regular"><i class="fa-regular fa-house"></i> Inicio</a>
             </li>
             <li><a href="catalogo/catalogo.html" class="poppins-regular"><i class="fa-solid fa-book"></i> Catalogo</a>
             </li>
-            <li><a href="contato.html"><i class="fa-solid fa-info"></i> Sobre Nós</a></li>
-            <li><a href="contato.html"><i class="fa-regular fa-paper-plane"></i> Orçamento</a></li>
-            <li><a href="contato.html"> <i class="fa-solid fa-location-crosshairs"></i> Atendimento</a></li>
+            <li><a href="#sobre"><i class="fa-solid fa-info"></i> Sobre Nós</a></li>
+            <li><a href="#orcamento"><i class="fa-regular fa-paper-plane"></i> Orçamento</a></li>
+            <li><a href="#atuacao"> <i class="fa-solid fa-location-crosshairs"></i> Atendimento</a></li>
             <div class="contact-header">
-                <li><a href="contato.html">Contato <i class="fa-regular fa-envelope"></i></a></li>
+                <li><a href="">Contato <i class="fa-regular fa-envelope"></i></a></li>
             </div>
         </ul>
     </nav>
+</header>
 
     <div class="carroussel-first">
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="assets/banner1.png" class="d-block w-100" alt="...">
+                    <img src="assets/banner/banner 4.gif" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/banner1.png" class="d-block w-100" alt="...">
+                    <img src="assets/banner/banner 1.png" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/banner1.png" class="d-block w-100" alt="...">
+                    <img src="assets/banner/banner 2.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/banner/banner 3.png" class="d-block w-100" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
@@ -75,28 +81,28 @@
 
     <section class="icones">
         <div class="icones-container">
-            <div class="icone-item">
+            <div class="icone-item" data-aos="fade-up">
                 <a href="catalogo/catalogo.html"><img src="assets/icons/iglu.png" alt=""></a>
                 <p><a href="catalogo/catalogo.html" target="_blank" style="text-decoration: none; color: #8b0f0f;">Fogão
                         Iglu</a></p>
             </div>
-            <div class="icone-item">
+            <div class="icone-item" data-aos="fade-up">
                 <a href="catalogo/catalogo.html"><img src="assets/icons/churrasqueira-lisa.png" alt=""></a>
                 <p><a href="catalogo/catalogo.html" target="_blank"
                         style="text-decoration: none; color: #8b0f0f;">Churrasqueira Tradicional</a></p>
             </div>
-            <div class="icone-item">
+            <div class="icone-item " data-aos="fade-up">
                 <a href="catalogo/catalogo.html"><img src="assets/icons/fogao.png" alt=""></a>
                 <p><a href="catalogo/catalogo.html" target="_blank" style="text-decoration: none; color: #8b0f0f;">Fogão
                         com Churrasqueira</a></p>
             </div>
     </section>
 
-    <section class="about-us">
+    <section class="about-us" id="sobre">
         <div class="container-principal">
 
-            <div class="imagens">
-                <div class="card-info-1">
+            <div class="imagens" >
+                <div class="card-info-1" data-aos="fade-up">
                     <h3>Sobre Nós</h3>
                     <P>Fundada em 2011 pelo proprietário Ricardo José Amado, a empresa nasceu da necessidade de oferecer
                         churrasqueiras pré-moldadas que atendessem aos mais diversos perfis de clientes.
@@ -105,10 +111,10 @@
                         atual.</P>
                 </div>
 
-                <img src="assets/icons/churrasqueira1.png" alt="">
-                <img src="assets/icons/churrasqueira2.png" alt="">
+                <img src="assets/icons/churrasqueira1.png" data-aos="fade-up" alt="">
+                <img src="assets/icons/churrasqueira2.png" data-aos="fade-up" alt="">
 
-                <div class="card-info-2">
+                <div class="card-info-2" data-aos="fade-up">
                     <h3>Nossa Filosofia</h3>
                     <p>Desde sempre, sua filosofia de trabalho é baseada no uso consciente de recursos, priorizando a
                         reciclagem e reduzindo ao máximo os impactos ao meio ambiente. Em constante evolução, a empresa
@@ -116,7 +122,7 @@
                         qualidade e total satisfação aos seus clientes.</p>
                 </div>
 
-                <div class="card-info-3">
+                <div class="card-info-3" data-aos="fade-up">
                     <h3>Sobre Nós</h3>
                     <p>Fundada em 2011 pelo proprietário Ricardo José Amado, a empresa nasceu da necessidade de oferecer
                         churrasqueiras pré-moldadas que atendessem aos mais diversos perfis de clientes.
@@ -136,7 +142,7 @@
 
     <section class="carousel-container-itens">
         
-        <div class="carousel-itens">
+        <div class="carousel-itens" id="orcamento">
             <div class="carousel-track-itens">
                 <div class="carousel-item-itens">
                     <img src="assets/icons/galeria1.jpeg" alt="">
@@ -157,7 +163,7 @@
         </div>
     
 
-        <div class="carousel-dots">
+        <div class="carousel-dots" >
             <span class="dot active" data-index="0"></span>
             <span class="dot" data-index="1"></span>
             <span class="dot" data-index="2"></span>
@@ -166,10 +172,10 @@
         </div>
     </section>
 
-    <section class="orcamento">
+    <section class="orcamento" data-aos="fade-up" >
         <div class="container-orcamento">
 
-            <div class="orcamento-texto">
+            <div class="orcamento-texto" id="atuacao">
                 <h3>Solicite seu orçamento</h3>
                 <h2>PERSONALIZADO</h2>
 
@@ -183,7 +189,7 @@
                 </button>
             </div>
 
-            <div class="orcamento-img">
+            <div class="orcamento-img" >
                 <img src="assets/icons/homemgrill.png" alt="Orçamento">
             </div>
 
@@ -239,7 +245,7 @@
 
 
 
-    <section class="atuacao">
+    <section class="atuacao" data-aos="fade-up" >
         <div class="atuacao-container">
 
             <div class="atuacao-texto">
@@ -253,7 +259,7 @@
                 </p>
             </div>
 
-            <div class="atuacao-mapa">
+            <div class="atuacao-mapa" data-aos="fade-up" data-aos-delay="200">
                 <img src="assets/icons/mapa-regiao.png" alt="Mapa de atuação">
             </div>
 
@@ -265,7 +271,7 @@
         <!-- LADO ESQUERDO (cards) -->
         <div class="avaliacoes-left">
 
-            <div class="avaliacao-card">
+            <div class="avaliacao-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="stars">★★★★★</div>
                 <p>
                     Produto robusto, acabamento impecável e excelente atendimento.
@@ -273,7 +279,7 @@
                 <img src="https://i.pravatar.cc/80?img=5" alt="cliente">
             </div>
 
-            <div class="avaliacao-card">
+            <div class="avaliacao-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="stars">★★★★★</div>
                 <p>
                     Entrega rápida, orçamento de qualidade e atendimento eficiente!
@@ -281,7 +287,7 @@
                 <img src="https://i.pravatar.cc/80?img=12" alt="cliente">
             </div>
 
-            <div class="avaliacao-card">
+            <div class="avaliacao-card" data-aos="fade-up" data-aos-delay="300">
                 <div class="stars">★★★★★</div>
                 <p>
                     Adorei a churrasqueira! belíssima e super funcional!!!
@@ -293,7 +299,7 @@
 
 
         <!-- LADO DIREITO (texto grande) -->
-        <div class="avaliacoes-right">
+        <div class="avaliacoes-right" data-aos="fade-up">
 
             <span class="tag">Avaliações</span>
 
@@ -317,13 +323,13 @@
 
             <h1>Perguntas<br>Frequentes</h1>
 
-            <div class="faq-bg-icon"></div>
+            <img src="assets/fogo-esquerdo.png"  class="fogo-esquerdo" alt="">
         </div>
 
         <!-- LADO DIREITO -->
         <div class="faq-right">
 
-            <details class="faq-item">
+            <details class="faq-item" data-aos="fade-up" data-aos-delay="100">
                 <summary>Todas as churrasqueiras são pré-moldadas?</summary>
                 <p>
                     Sim. Nossas churrasqueiras são produzidas em concreto pré-moldado,
@@ -331,7 +337,7 @@
                 </p>
             </details>
 
-            <details class="faq-item">
+            <details class="faq-item" data-aos="fade-up" data-aos-delay="200">
                 <summary>Vocês fazem entregas de pedidos de varejo?</summary>
                 <p>
                     Sim. Realizamos entregas tanto para clientes finais quanto para
@@ -339,7 +345,7 @@
                 </p>
             </details>
 
-            <details class="faq-item">
+            <details class="faq-item" data-aos="fade-up" data-aos-delay="300">
                 <summary>As churrasqueiras vêm montadas ou desmontadas?</summary>
                 <p>
                     Elas são entregues em módulos pré-moldados para facilitar o transporte,
@@ -347,7 +353,7 @@
                 </p>
             </details>
 
-            <details class="faq-item">
+            <details class="faq-item" data-aos="fade-up" data-aos-delay="400">
                 <summary>Como funcionam os pedidos para lojas atacadistas?</summary>
                 <p>
                     Para atacado oferecemos condições especiais, preços diferenciados e

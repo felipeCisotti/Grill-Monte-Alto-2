@@ -1,113 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grill Monte Alto - Catálogo</title>
-    <link rel="stylesheet" href="catalogo.css" />
-    <link rel="shortcut icon" href="../assets/icone-logo.png" type="image/x-icon">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Alfa+Slab+One&display=swap" rel="stylesheet">
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grill Monte Alto - Catálogo</title>
+  <link rel="stylesheet" href="catalogo.css" />
+  <link rel="shortcut icon" href="../assets/icone-logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Alfa+Slab+One&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
     <nav>
       <img src="../assets/Logo-grill(branca).png" alt="Grill Monte Alto" class="nav-logo" />
-      <input
-        placeholder="Pesquisar"
-        type="text"
-        name="text"
-        class="input-header"
-        id="nav-search"
-      />
+      <input placeholder="Pesquisar" type="text" name="text" class="input-header" id="nav-search" />
       <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Abrir menu">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-menu">
         <li>
-          <a href="pagina-principal.html"
-            ><i class="fa-regular fa-house"></i> Inicio</a
-          >
+          <a href="../index.html"><i class="fa-regular fa-house"></i> Inicio</a>
         </li>
         <li>
-          <a href="loja.html"><i class="fa-solid fa-book"></i> Catalogo</a>
+          <a href="../index.html"><i class="fa-solid fa-book"></i> Catalogo</a>
         </li>
         <li>
-          <a href="contato.html"><i class="fa-solid fa-info"></i> Sobre Nós</a>
+          <a href="../index.html"><i class="fa-solid fa-info"></i> Sobre Nós</a>
         </li>
         <li>
-          <a href="contato.html"
-            ><i class="fa-regular fa-paper-plane"></i> Orçamento</a
-          >
+          <a href="../index.html"><i class="fa-regular fa-paper-plane"></i> Orçamento</a>
         </li>
         <li>
-          <a href="contato.html">
-            <i class="fa-solid fa-location-crosshairs"></i> Atendimento</a
-          >
+          <a href="../index.html">
+            <i class="fa-solid fa-location-crosshairs"></i> Atendimento</a>
         </li>
         <div class="contact-header">
           <li>
-            <a href="contato.html"
-              >Contato <i class="fa-regular fa-envelope"></i
-            ></a>
+            <a href="../index.html">Contato <i class="fa-regular fa-envelope"></i></a>
           </li>
         </div>
       </ul>
     </nav>
+  </header>
 
+  <div class="sub">
     <h1 class="catalogo-title">CATÁLOGO</h1>
     <p class="catalogo-subtitle">
       Confira nossa variedade de churrasqueiras e escolha a sua.
     </p>
     <div class="catalogo-container">
+      <!-- Linha 1 -->
       <section class="cards-catalogo">
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="assets/churrasqueira-desenhada.png" alt="" />
-              <p>CHURRASQUEIRA DESENHADA</p>
+              <img src="assets/catalogo/lisa.png" alt="" />
+              <p>CHURRASQUEIRA LISA</p>
             </div>
             <div class="flip-card-back">
               <div class="card-header">
-                <h2>CHURRASQUEIRA<br />DESENHADA</h2>
+                <h2>CHURRASQUEIRA<br />LISA</h2>
               </div>
-
               <div class="card-body">
                 <h3>Tamanho & Largura</h3>
                 <hr />
-
                 <div class="info-row">
                   <span>4 Esp.</span>
                   <span>65cm</span>
                 </div>
-
-                <!-- Seção 2 -->
                 <h3>Altura & Profundidade</h3>
                 <hr />
-
                 <div class="info-row">
                   <span>Altura</span>
                   <span>1,90m</span>
                 </div>
-
                 <div class="info-row">
                   <span>Profundidade</span>
                   <span>55cm</span>
                 </div>
-
-                <!-- Seção 3 -->
                 <h3>Cores Disponíveis</h3>
                 <hr />
-
                 <div class="colors">
                   <span class="color red"></span>
                   <span class="color beige"></span>
                   <span class="color brown"></span>
                   <span class="color yellow"></span>
                 </div>
-
                 <p class="colors-text">Vermelha, Envelhecida, Marrom, Palha</p>
               </div>
             </div>
@@ -119,48 +101,38 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="assets/churrasqueira-desenhada.png" alt="" />
+              <img src="assets/catalogo/desenhada.png" alt="" />
               <p>CHURRASQUEIRA DESENHADA</p>
             </div>
             <div class="flip-card-back">
               <div class="card-header">
                 <h2>CHURRASQUEIRA<br />DESENHADA</h2>
               </div>
-
               <div class="card-body">
                 <h3>Tamanho & Largura</h3>
                 <hr />
-
                 <div class="info-row">
                   <span>4 Esp.</span>
                   <span>65cm</span>
                 </div>
-
-                <!-- Seção 2 -->
                 <h3>Altura & Profundidade</h3>
                 <hr />
-
                 <div class="info-row">
                   <span>Altura</span>
                   <span>1,90m</span>
                 </div>
-
                 <div class="info-row">
                   <span>Profundidade</span>
                   <span>55cm</span>
                 </div>
-
-                <!-- Seção 3 -->
                 <h3>Cores Disponíveis</h3>
                 <hr />
-
                 <div class="colors">
                   <span class="color red"></span>
                   <span class="color beige"></span>
                   <span class="color brown"></span>
                   <span class="color yellow"></span>
                 </div>
-
                 <p class="colors-text">Vermelha, Envelhecida, Marrom, Palha</p>
               </div>
             </div>
@@ -172,48 +144,82 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="assets/churrasqueira-desenhada.png" alt="" />
-              <p>CHURRASQUEIRA DESENHADA</p>
+              <img src="assets/catalogo/fogades-churrasqueira.png" style="width: 98%; height: auto;" alt="" />
+              <p>FOGÃO DESENHADO<br />COM CHURRASQUEIRA</p>
             </div>
             <div class="flip-card-back">
               <div class="card-header">
-                <h2>CHURRASQUEIRA<br />DESENHADA</h2>
+                <h2>FOGÃO DESENHADO<br />COM CHURRASQUEIRA</h2>
               </div>
-
               <div class="card-body">
                 <h3>Tamanho & Largura</h3>
                 <hr />
-
                 <div class="info-row">
                   <span>4 Esp.</span>
                   <span>65cm</span>
                 </div>
-
-                <!-- Seção 2 -->
                 <h3>Altura & Profundidade</h3>
                 <hr />
-
                 <div class="info-row">
                   <span>Altura</span>
                   <span>1,90m</span>
                 </div>
-
                 <div class="info-row">
                   <span>Profundidade</span>
                   <span>55cm</span>
                 </div>
-
-                <!-- Seção 3 -->
                 <h3>Cores Disponíveis</h3>
                 <hr />
-
                 <div class="colors">
                   <span class="color red"></span>
                   <span class="color beige"></span>
                   <span class="color brown"></span>
                   <span class="color yellow"></span>
                 </div>
+                <p class="colors-text">Vermelha, Envelhecida, Marrom, Palha</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <!-- Linha 2 -->
+      <section class="cards-catalogo">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="assets/catalogo/com mesa lisa.png" alt="" />
+              <p>CHURRASQUEIRA COM MESA LISA</p>
+            </div>
+            <div class="flip-card-back">
+              <div class="card-header">
+                <h2>CHURRASQUEIRA<br />COM MESA LISA</h2>
+              </div>
+              <div class="card-body">
+                <h3>Tamanho & Largura</h3>
+                <hr />
+                <div class="info-row">
+                  <span>4 Esp.</span>
+                  <span>65cm</span>
+                </div>
+                <h3>Altura & Profundidade</h3>
+                <hr />
+                <div class="info-row">
+                  <span>Altura</span>
+                  <span>1,90m</span>
+                </div>
+                <div class="info-row">
+                  <span>Profundidade</span>
+                  <span>55cm</span>
+                </div>
+                <h3>Cores Disponíveis</h3>
+                <hr />
+                <div class="colors">
+                  <span class="color red"></span>
+                  <span class="color beige"></span>
+                  <span class="color brown"></span>
+                  <span class="color yellow"></span>
+                </div>
                 <p class="colors-text">Vermelha, Envelhecida, Marrom, Palha</p>
               </div>
             </div>
@@ -225,49 +231,179 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="assets/churrasqueira-desenhada.png" alt="" />
-              <p>CHURRASQUEIRA DESENHADA</p>
+              <img src="assets/catalogo/desenhada-mesa.png" alt="" />
+              <p>CHURRASQUEIRA COM MESA DESENHADA</p>
             </div>
             <div class="flip-card-back">
               <div class="card-header">
-                <h2>CHURRASQUEIRA<br />DESENHADA</h2>
+                <h2>CHURRASQUEIRA<br />COM MESA DESENHADA</h2>
               </div>
-
               <div class="card-body">
                 <h3>Tamanho & Largura</h3>
                 <hr />
-
                 <div class="info-row">
                   <span>4 Esp.</span>
                   <span>65cm</span>
                 </div>
-
-                <!-- Seção 2 -->
                 <h3>Altura & Profundidade</h3>
                 <hr />
-
                 <div class="info-row">
                   <span>Altura</span>
                   <span>1,90m</span>
                 </div>
-
                 <div class="info-row">
                   <span>Profundidade</span>
                   <span>55cm</span>
                 </div>
-
-                <!-- Seção 3 -->
                 <h3>Cores Disponíveis</h3>
                 <hr />
-
                 <div class="colors">
                   <span class="color red"></span>
                   <span class="color beige"></span>
                   <span class="color brown"></span>
                   <span class="color yellow"></span>
                 </div>
-
                 <p class="colors-text">Vermelha, Envelhecida, Marrom, Palha</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cards-catalogo">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="assets/catalogo/fogao-liso.png" style="width: 98%; height: auto;" alt="" />
+              <p>FOGÃO LISO</p>
+            </div>
+            <div class="flip-card-back">
+              <div class="card-header">
+                <h2>FOGÃO LISO</h2>
+              </div>
+              <div class="card-body">
+                <h3>Tamanho & Largura</h3>
+                <hr />
+                <div class="info-row">
+                  <span>4 Esp.</span>
+                  <span>65cm</span>
+                </div>
+                <h3>Altura & Profundidade</h3>
+                <hr />
+                <div class="info-row">
+                  <span>Altura</span>
+                  <span>1,90m</span>
+                </div>
+                <div class="info-row">
+                  <span>Profundidade</span>
+                  <span>55cm</span>
+                </div>
+                <h3>Cores Disponíveis</h3>
+                <hr />
+                <div class="colors">
+                  <span class="color red"></span>
+                  <span class="color beige"></span>
+                  <span class="color brown"></span>
+                  <span class="color yellow"></span>
+                </div>
+                <p class="colors-text">Vermelha, Envelhecida, Marrom, Palha</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Linha 3 -->
+      <section class="cards-catalogo">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="assets/catalogo/iglu.png" style="width: 98%; height: auto;" alt="" />
+              <p>FOGÃO IGLU</p>
+            </div>
+            <div class="flip-card-back">
+              <div class="card-header">
+                <h2>FOGÃO IGLU</h2>
+              </div>
+              <div class="card-body">
+                <h3>Diâmetro & Altura</h3>
+                <hr />
+                <div class="info-row">
+                  <span>Diam.</span>
+                  <span>1m</span>
+                </div>
+                <div class="info-row">
+                  <span>Altura</span>
+                  <span>50cm</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cards-catalogo">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="assets/catalogo/predial.png" alt="" />
+              <p>CHURRASQUEIRA PREDIAL</p>
+            </div>
+            <div class="flip-card-back">
+              <div class="card-header">
+                <h2>CHURRASQUEIRA<br />PREDIAL</h2>
+              </div>
+              <div class="card-body">
+                <h3>Tamanho & Largura</h3>
+                <hr />
+                <div class="info-row">
+                  <span>5 Esp.</span>
+                  <span>75cm</span>
+                </div>
+                <h3>Altura & Profundidade</h3>
+                <hr />
+                <div class="info-row">
+                  <span>Altura</span>
+                  <span>1,90m</span>
+                </div>
+                <div class="info-row">
+                  <span>Profundidade</span>
+                  <span>55cm</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cards-catalogo">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="assets/catalogo/desenhada com friso.png" alt="" />
+              <p>CHURRASQUEIRA DESENHADA<br />COM FRISO</p>
+            </div>
+            <div class="flip-card-back">
+              <div class="card-header">
+                <h2>CHURRASQUEIRA<br />DESENHADA COM FRISO</h2>
+              </div>
+              <div class="card-body">
+                <h3>Tamanho & Largura</h3>
+                <hr />
+                <div class="info-row">
+                  <span>4 Esp.</span>
+                  <span>65cm</span>
+                </div>
+                <h3>Altura & Profundidade</h3>
+                <hr />
+                <div class="info-row">
+                  <span>Altura</span>
+                  <span>1,90m</span>
+                </div>
+                <div class="info-row">
+                  <span>Profundidade</span>
+                  <span>55cm</span>
+                </div>
               </div>
             </div>
           </div>
@@ -275,16 +411,16 @@
       </section>
     </div>
     <script>
-      (function() {
+      (function () {
         var toggle = document.getElementById('nav-toggle');
         var menu = document.querySelector('.nav-menu');
         if (toggle && menu) {
-          toggle.addEventListener('click', function() {
+          toggle.addEventListener('click', function () {
             menu.classList.toggle('nav-menu-open');
             toggle.classList.toggle('nav-toggle-open');
           });
-          [].forEach.call(menu.querySelectorAll('a'), function(link) {
-            link.addEventListener('click', function() {
+          [].forEach.call(menu.querySelectorAll('a'), function (link) {
+            link.addEventListener('click', function () {
               menu.classList.remove('nav-menu-open');
               toggle.classList.remove('nav-toggle-open');
             });
@@ -292,5 +428,43 @@
         }
       })();
     </script>
-  </body>
+
+        <footer class="footer">
+        <div class="footer-container">
+
+            <!-- LOGO -->
+            <div class="footer-logo">
+                <img src="../assets/icons/Logo-vermelha.png" alt="Grill Monte Alto">
+            </div>
+
+            <!-- LINKS -->
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Quem Somos</a></li>
+                    <li><a href="#">Glossário</a></li>
+                    <li><a href="#">Destaques</a></li>
+                </ul>
+
+                <ul>
+                    <li><a href="#">Fale Conosco</a></li>
+                    <li><a href="#">Trabalhe Conosco</a></li>
+                </ul>
+            </div>
+
+            <!-- FRASE -->
+            <div class="footer-frase">
+                <img src="../assets/icons/frase.png" alt="Frase de efeito">
+            </div>
+
+        </div>
+
+        <!-- REDES SOCIAIS -->
+        <div class="footer-social">
+            <a href="#"><img src="../assets/icons/insta.png" alt="Instagram"></a>
+            <a href="#"><img src="../assets/icons/face.png" alt="Facebook"></a>
+        </div>
+    </footer>
+
+</body>
+
 </html>
