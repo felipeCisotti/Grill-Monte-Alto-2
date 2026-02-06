@@ -135,6 +135,10 @@
 
 
     <section class="carousel-container-itens">
+        <button class="carousel-nav carousel-nav-prev" id="prevBtn" aria-label="Slide anterior">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        
         <div class="carousel-itens">
             <div class="carousel-track-itens">
                 <div class="carousel-item-itens">
@@ -154,11 +158,17 @@
                 </div>
             </div>
         </div>
+        
+        <button class="carousel-nav carousel-nav-next" id="nextBtn" aria-label="Próximo slide">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
 
         <div class="carousel-dots">
             <span class="dot active" data-index="0"></span>
             <span class="dot" data-index="1"></span>
             <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+            <span class="dot" data-index="4"></span>
         </div>
     </section>
 
@@ -404,24 +414,73 @@
     <script>
         const track = document.querySelector('.carousel-track-itens');
         const dots = document.querySelectorAll('.dot');
-
+        const items = document.querySelectorAll('.carousel-item-itens');
+        
         const itemsPerView = 3;
         let currentIndex = 0;
-
-        dots.forEach(dot => {
-            dot.addEventListener('click', () => {
-                currentIndex = parseInt(dot.dataset.index);
-                updateCarousel();
-            });
-        });
-
+        let autoplayInterval;
+        const autoplayDelay = 5000; // 5 segundos
+        
+        // Função para atualizar carrossel
         function updateCarousel() {
             const itemWidth = document.querySelector('.carousel-item-itens').offsetWidth + 30;
             track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
-
+            
             dots.forEach(dot => dot.classList.remove('active'));
-            dots[currentIndex].classList.add('active');
+            // Mostrar dot baseado na posição atual (com limite máximo de dots)
+            const dotIndex = Math.min(currentIndex, dots.length - 1);
+            dots[dotIndex].classList.add('active');
         }
+        
+        // Próximo slide
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % items.length;
+            updateCarousel();
+            resetAutoplay();
+        }
+        
+        // Slide anterior
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            updateCarousel();
+            resetAutoplay();
+        }
+        
+        // Iniciar autoplay
+        function startAutoplay() {
+            autoplayInterval = setInterval(nextSlide, autoplayDelay);
+        }
+        
+        // Resetar autoplay
+        function resetAutoplay() {
+            clearInterval(autoplayInterval);
+            startAutoplay();
+        }
+        
+        // Cliques nos dots
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                updateCarousel();
+                resetAutoplay();
+            });
+        });
+        
+        // Botões de navegação
+        document.getElementById('prevBtn').addEventListener('click', prevSlide);
+        document.getElementById('nextBtn').addEventListener('click', nextSlide);
+        
+        // Iniciar autoplay ao carregar
+        startAutoplay();
+        
+        // Parar autoplay ao passar o mouse (opcional)
+        document.querySelector('.carousel-container-itens').addEventListener('mouseenter', () => {
+            clearInterval(autoplayInterval);
+        });
+        
+        document.querySelector('.carousel-container-itens').addEventListener('mouseleave', () => {
+            startAutoplay();
+        });
     </script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
